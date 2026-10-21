@@ -1,0 +1,141 @@
+<HTML BGCOLOR="#000000">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>Scarred By Anger</TITLE>
+<META NAME="description" CONTENT="Scarred By Anger is a Canadian heavy metal band formed in Vernon, B.C., in 1998. Their demo EP Bludgeon, planned for a 1999 release, was recovered from a 22.05 kHz DAT in 2024 and remastered.">
+<STYLE TYPE="text/css">HTML { background-color: #000000; } BODY { background-color: #000000; background-attachment: fixed; }</STYLE>
+<SCRIPT LANGUAGE="JavaScript">
+function legacyScaleNumber(value, factor) {
+    var text = String(value);
+    var number;
+    if (text == "" || text == "auto" || text.indexOf("%") >= 0 || text.indexOf("em") >= 0) return value;
+    number = parseFloat(text);
+    if (isNaN(number)) return value;
+    return (number * factor) + "px";
+}
+
+function sbaScalePage(mode) {
+    var designWidth = 1040;
+    var contentWidth = 1000;
+    var availableWidth = 0;
+    var factor;
+    var offsetX;
+    var elements;
+    var i;
+    var element;
+    var style;
+    var attribute;
+    var originalSize;
+
+    if (window.screen && window.screen.width) availableWidth = window.screen.width;
+    if (document.body && document.body.clientWidth) availableWidth = document.body.clientWidth;
+    if (!availableWidth) availableWidth = 640;
+
+    factor = availableWidth / designWidth;
+    if (factor > 1) factor = 1;
+    if (factor < 0.25) factor = 0.25;
+    offsetX = (availableWidth - (contentWidth * factor)) / 2;
+    elements = document.all;
+    if (!elements) return;
+
+    if (mode == "absolute") {
+        for (i = 0; i < elements.length; i++) {
+            element = elements[i];
+            style = element.style;
+            if (!style) continue;
+            if (style.position == "absolute") {
+                style.left = legacyScaleNumber(style.left, factor);
+                style.top = legacyScaleNumber(style.top, factor);
+                if (style.left != "") style.left = (parseFloat(style.left) + offsetX) + "px";
+            }
+            style.width = legacyScaleNumber(style.width, factor);
+            style.height = legacyScaleNumber(style.height, factor);
+            style.fontSize = legacyScaleNumber(style.fontSize, factor);
+            style.lineHeight = legacyScaleNumber(style.lineHeight, factor);
+            style.padding = legacyScaleNumber(style.padding, factor);
+            style.paddingTop = legacyScaleNumber(style.paddingTop, factor);
+            style.borderWidth = legacyScaleNumber(style.borderWidth, factor);
+        }
+        document.body.style.height = (1600 * factor) + "px";
+    } else {
+        for (i = 0; i < elements.length; i++) {
+            element = elements[i];
+            style = element.style;
+            if (style) {
+                style.width = legacyScaleNumber(style.width, factor);
+                style.height = legacyScaleNumber(style.height, factor);
+                style.fontSize = legacyScaleNumber(style.fontSize, factor);
+                style.lineHeight = legacyScaleNumber(style.lineHeight, factor);
+                style.padding = legacyScaleNumber(style.padding, factor);
+                style.paddingTop = legacyScaleNumber(style.paddingTop, factor);
+                style.borderWidth = legacyScaleNumber(style.borderWidth, factor);
+            }
+            if (element.getAttribute) {
+                attribute = element.getAttribute("width");
+                if (attribute != null && String(attribute).indexOf("%") < 0 && !isNaN(parseFloat(attribute))) element.setAttribute("width", Math.round(parseFloat(attribute) * factor));
+                if (element.tagName != "IMG") {
+                    attribute = element.getAttribute("height");
+                    if (attribute != null && String(attribute).indexOf("%") < 0 && !isNaN(parseFloat(attribute))) element.setAttribute("height", Math.round(parseFloat(attribute) * factor));
+                }
+                attribute = element.getAttribute("cellpadding");
+                if (attribute != null && !isNaN(parseFloat(attribute))) element.setAttribute("cellpadding", Math.round(parseFloat(attribute) * factor));
+                attribute = element.getAttribute("cellspacing");
+                if (attribute != null && !isNaN(parseFloat(attribute))) element.setAttribute("cellspacing", Math.round(parseFloat(attribute) * factor));
+                attribute = element.getAttribute("border");
+                if (attribute != null && !isNaN(parseFloat(attribute))) element.setAttribute("border", Math.max(0, Math.round(parseFloat(attribute) * factor)));
+                if (element.tagName == "FONT") {
+                    originalSize = parseInt(element.getAttribute("size"), 10);
+                    if (!isNaN(originalSize)) element.setAttribute("size", Math.max(1, Math.round(1 + ((originalSize - 1) * factor))));
+                }
+            }
+        }
+        document.body.style.width = (contentWidth * factor) + "px";
+        document.body.style.marginLeft = offsetX + "px";
+        document.body.style.marginRight = offsetX + "px";
+        document.body.style.fontSize = (100 * factor) + "%";
+    }
+    window.status = "Scarred By Anger: " + availableWidth + "px viewport, scale " + factor;
+}
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#FFFFFF" LINK="#FF0000" VLINK="#808080" ALINK="#FFFFFF" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" STYLE="background:#000000;background-attachment:fixed;" ONLOAD="sbaScalePage('flow')">
+<CENTER>
+<TABLE WIDTH="1000" BORDER="0" CELLPADDING="0" CELLSPACING="0" BGCOLOR="#000000">
+<TR HEIGHT="28"><TD COLSPAN="3">&nbsp;</TD></TR>
+<TR><TD COLSPAN="3" ALIGN="CENTER"><IMG SRC="../logo.bmp" ALT="SCARRED BY ANGER" WIDTH="600" BORDER="0"></TD></TR>
+<TR><TD COLSPAN="3"><HR SIZE="3" COLOR="#FF0000" WIDTH="100%"></TD></TR>
+<TR HEIGHT="55"><TD COLSPAN="3" ALIGN="CENTER"><FONT FACE="Courier New" COLOR="#FF0000"><B><MARQUEE SCROLLAMOUNT="4">Molest The Dead... Erect Is My Head... Dirt Is My Bed... Molest The Dead. --- You Seek Your Pleasure Pain... Driven By Greed. --- You Can't Deny It... You Don't Fit In With Me... Cause I Deny You... Your Hypocrisy... We're All To Blame.</MARQUEE></B></FONT></TD></TR>
+<TR>
+<TD WIDTH="200" ALIGN="CENTER" VALIGN="TOP" BGCOLOR="#000000">
+<BR><BR><TABLE BGCOLOR="#000000" BORDER="4" BORDERCOLOR="#808080" CELLPADDING="3"><TR><TD><IMG SRC="../skull.bmp" ALT="Skull" WIDTH="170" BORDER="0"></TD></TR></TABLE>
+<BR><BR><BR><BR><TABLE BGCOLOR="#000000" BORDER="5" BORDERCOLOR="#808080" CELLPADDING="3"><TR><TD><IMG SRC="../dave2.bmp" ALT="Dave" WIDTH="170" BORDER="0"></TD></TR></TABLE>
+</TD>
+<TD WIDTH="600" ALIGN="CENTER" VALIGN="TOP" BGCOLOR="#000000">
+<TABLE BGCOLOR="#000000" BORDER="10" BORDERCOLOR="#808080" CELLPADDING="0" CELLSPACING="0"><TR><TD><IMG SRC="../poster.bmp" ALT="Scarred By Anger poster" WIDTH="480" BORDER="0"></TD></TR></TABLE>
+<BR>
+<TABLE BGCOLOR="#000000" WIDTH="580" BORDER="0" CELLPADDING="6" CELLSPACING="0"><TR>
+<TD WIDTH="50%" ALIGN="CENTER" VALIGN="TOP"><TABLE BGCOLOR="#000000" BORDER="5" BORDERCOLOR="#808080" CELLPADDING="4"><TR><TD><IMG SRC="../dave.bmp" ALT="Dave Marlin" WIDTH="210" BORDER="0"></TD></TR></TABLE><BR><IMG SRC="../davelogo.bmp" ALT="DAVE MARLIN" WIDTH="200" BORDER="0"><P><FONT FACE="Courier New" COLOR="#FFFFFF">Vocals, Guitars and Bass</FONT></P></TD>
+<TD WIDTH="50%" ALIGN="CENTER" VALIGN="TOP"><TABLE BGCOLOR="#000000" BORDER="5" BORDERCOLOR="#808080" CELLPADDING="4"><TR><TD><IMG SRC="../art.bmp" ALT="Art Carriere" WIDTH="240" BORDER="0"></TD></TR></TABLE><BR><IMG SRC="../artlogo.bmp" ALT="ART CARRIERE" WIDTH="200" BORDER="0"><P><FONT FACE="Courier New" COLOR="#FFFFFF">Drums and Back Vocals</FONT></P></TD>
+</TR></TABLE>
+<BR><IMG SRC="../bludgeonlogo.bmp" ALT="Bludgeon" WIDTH="275" BORDER="0"><BR><BR>
+<TABLE BGCOLOR="#000000" WIDTH="590" BORDER="6" BORDERCOLOR="#FF0000" CELLPADDING="12" CELLSPACING="0"><TR><TD ALIGN="CENTER"><H3><FONT FACE="Courier New" COLOR="#FFFFFF" SIZE="5">PLAY A SAMPLE</FONT></H3><HR SIZE="1" COLOR="#FF0000" WIDTH="80%"><BR>
+<P><FONT FACE="Courier New" SIZE="4" COLOR="#FFFFFF">01.</FONT> <A HREF="../01%20Molesting%20The%20Dead.mp3"><IMG SRC="../molestingthedeadlogo.bmp" ALT="Molesting The Dead" WIDTH="310" BORDER="0"></A></P>
+<P><FONT FACE="Courier New" SIZE="4" COLOR="#FFFFFF">02.</FONT> <A HREF="../02%20Bludgeon.mp3"><IMG SRC="../bludgeonlogo.bmp" ALT="Bludgeon" WIDTH="232" BORDER="0"></A></P>
+<P><FONT FACE="Courier New" SIZE="4" COLOR="#FFFFFF">03.</FONT> <A HREF="../03%20Anchor.mp3"><IMG SRC="../anchorlogo.bmp" ALT="Anchor" WIDTH="232" BORDER="0"></A></P>
+</TD></TR></TABLE>
+<TABLE BGCOLOR="#000000" WIDTH="590" BORDER="5" BORDERCOLOR="#808080" CELLPADDING="12" CELLSPACING="0"><TR><TD ALIGN="CENTER"><FONT FACE="Courier New" SIZE="4" COLOR="#FF0000"><B>OVERVIEW</B></FONT><BR><BR><FONT FACE="Courier New" SIZE="3" COLOR="#FFFFFF">Scarred By Anger is a Canadian heavy metal band formed in Vernon, British Columbia, by Art Carriere and Dave Marlin in 1998. Their only known release is the demo EP Bludgeon, recorded at Black Lab Recordings in Vernon by local home-recording engineer Harvey Lebrash. The modest basement studio served small bands making demos and provided recording services only, leaving mixing and mastering to others.<BR><BR>Bludgeon was intended for release in 1999, but severe technical limitations and inexpensive equipment left the initial mixes unfinished and badly degraded. The EP remained unreleased and was effectively lost for 25 years. In 2024, the only surviving multitrack recording was recovered from a Digital Audio Tape (DAT) recorded at the unusual sample rate of 22.05 kHz. The EP was then remixed and remastered using modern technology, bringing it to the best quality the surviving material could support. Its low sample rate still gives the recording a dark, degraded sound that complements the EP&rsquo;s bleak atmosphere and abrasive musical style.</FONT></TD></TR></TABLE><BR><BR>
+</TD>
+<TD WIDTH="200" ALIGN="CENTER" VALIGN="TOP" BGCOLOR="#000000">
+<BR><BR><TABLE BGCOLOR="#000000" BORDER="4" BORDERCOLOR="#808080" CELLPADDING="3"><TR><TD><IMG SRC="../album.bmp" ALT="Album art" WIDTH="170" BORDER="0"></TD></TR></TABLE>
+<BR><BR><BR><BR><TABLE BGCOLOR="#000000" BORDER="5" BORDERCOLOR="#808080" CELLPADDING="3"><TR><TD><IMG SRC="../deadguy.bmp" ALT="Artwork" WIDTH="170" BORDER="0"></TD></TR></TABLE>
+</TD>
+</TR>
+<TR HEIGHT="25"><TD COLSPAN="3">&nbsp;</TD></TR>
+<TR><TD COLSPAN="3" ALIGN="CENTER" BGCOLOR="#080808"><FONT FACE="Courier New" SIZE="3" COLOR="#FFFFFF"><B>CONNECT</B></FONT><BR><BR><FONT FACE="Courier New" SIZE="2"><A HREF="https://www.youtube.com/@scarredbyanger">YOUTUBE</A> &nbsp; | &nbsp; <A HREF="https://www.instagram.com/scarredbyanger">INSTAGRAM</A> &nbsp; | &nbsp; <A HREF="https://www.facebook.com/scarredbyanger">FACEBOOK</A> &nbsp; | &nbsp; <A HREF="https://www.tiktok.com/@scarredbyanger">TIKTOK</A></FONT></TD></TR>
+<TR HEIGHT="40"><TD COLSPAN="3">&nbsp;</TD></TR>
+<TR><TD COLSPAN="3"><HR SIZE="3" COLOR="#FF0000" WIDTH="100%"></TD></TR>
+<TR><TD COLSPAN="3" ALIGN="CENTER"><FONT FACE="Courier New" SIZE="2" COLOR="#FF0000">&copy; 1998 - 2026 Scarred By Anger. All rights reserved.<BR>&copy; 2026 scarredbyanger.com. All rights reserved.</FONT></TD></TR>
+</TABLE>
+</CENTER>
+</BODY>
+</HTML>
